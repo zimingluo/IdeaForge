@@ -1,3 +1,10 @@
+export N_GPUS=4
+export BASE_MODEL='/home/zxl240011/IdeaForge/models/Qwen2.5-7B-Instruct'
+export DATA_DIR='/home/zxl240011/IdeaForge/data'
+export ROLLOUT_TP_SIZE=2
+export EXPERIMENT_NAME=countdown-qwen2.5-7b-instruct
+export VLLM_ATTENTION_BACKEND=XFORMERS
+
 python3 -m verl.trainer.main_ppo \
 data.train_files=$DATA_DIR/train.parquet \
 data.val_files=$DATA_DIR/test.parquet \
